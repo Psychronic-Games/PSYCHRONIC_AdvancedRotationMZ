@@ -1,14 +1,21 @@
 # PSYCHRONIC_AdvancedRotationMZ
 
-v1.3 Advanced rotation system for events and pictures with continuous rotation support
+Advanced rotation system for events and pictures with continuous rotation support
 
-## What This Is
+## What It Does
 
-This repository contains a standalone **RPG Maker MZ plugin** from Psychronic.
+and pictures with precise floating-point control and continuous rotation.
 
-## Plugin File
+## Plugin Commands
 
-- `PSYCHRONIC_AdvancedRotationMZ.js`
+- RotatePicture
+- RotateEvent
+- StopRotation
+
+## Compatibility
+
+- RPG Maker MZ
+- JavaScript plugin for `js/plugins/`
 
 ## Installation
 
@@ -20,11 +27,11 @@ This repository contains a standalone **RPG Maker MZ plugin** from Psychronic.
 
 This version was exported from the RPG Reactor Complex template source plugin folder.
 
-Current source version: 1.3
-
 ## Author
 
 Psychronic
+
+https://psychronic.itch.io
 
 ## License
 
