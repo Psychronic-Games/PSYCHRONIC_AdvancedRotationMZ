@@ -6,7 +6,7 @@ Advanced rotation system for events and pictures with continuous rotation suppor
 
 ## What It Does
 
-and pictures with precise floating-point control and continuous rotation.
+PSYCHRONIC_AdvancedRotationMZ enhances RPG Maker MZ's rotation capabilities for events and pictures with precise floating-point control and continuous rotation.
 
 ## Plugin File
 
@@ -18,9 +18,39 @@ and pictures with precise floating-point control and continuous rotation.
 
 ## Plugin Commands
 
-- `RotatePicture`
-- `RotateEvent`
-- `StopRotation`
+### Rotate Picture
+
+- Command: `RotatePicture`
+- Description: Rotates a picture with specified parameters
+
+Arguments:
+
+- `pictureId` (Picture ID) - type: number; default: 1: ID of the picture to rotate (positive only, 1 or higher)
+- `angle` (Angle) - type: number; default: 0: Target angle in degrees (positive or negative)
+- `speed` (Speed) - type: number; default: 1: Degrees per frame (positive or negative)
+- `continuous` (Continuous) - type: boolean; default: false: 0 = one-time rotation, 1 = continuous
+
+### Rotate Event
+
+- Command: `RotateEvent`
+- Description: Rotates an event with specified parameters
+
+Arguments:
+
+- `eventId` (Event ID) - type: number; default: 0: Event ID (0 for this event, positive or negative)
+- `angle` (Angle) - type: number; default: 0: Target angle in degrees (positive or negative)
+- `speed` (Speed) - type: number; default: 1: Degrees per frame (positive or negative)
+- `continuous` (Continuous) - type: boolean; default: false: 0 = one-time rotation, 1 = continuous
+
+### Stop Rotation
+
+- Command: `StopRotation`
+- Description: Stops rotation of specified object
+
+Arguments:
+
+- `type` (Type) - type: select; default: Picture; options: Picture, Event: Type of object to stop rotating
+- `id` (ID) - type: number; default: 1: ID of the object to stop (positive or negative)
 
 ## Installation
 
@@ -31,6 +61,7 @@ and pictures with precise floating-point control and continuous rotation.
 
 ## Full Plugin Help
 
+PSYCHRONIC_AdvancedRotationMZ enhances RPG Maker MZ's rotation capabilities for events
 and pictures with precise floating-point control and continuous rotation.
 
 Plugin Commands:
@@ -48,82 +79,6 @@ Examples:
 RotatePicture 1 -90.5 0.25 0
 RotateEvent 2 -360 -1.5 1
 StopRotation Picture 1
-
-@command RotatePicture
-@text Rotate Picture
-@desc Rotates a picture with specified parameters
-@arg pictureId
-@type number
-@text Picture ID
-@desc ID of the picture to rotate (positive only, 1 or higher)
-@default 1
-@arg angle
-@type number
-@decimals 2
-@text Angle
-@desc Target angle in degrees (positive or negative)
-@default 0
-@min -3600
-@max 3600
-@arg speed
-@type number
-@decimals 2
-@text Speed
-@desc Degrees per frame (positive or negative)
-@default 1
-@min -3600
-@max 3600
-@arg continuous
-@type boolean
-@text Continuous
-@desc 0 = one-time rotation, 1 = continuous
-@default false
-
-@command RotateEvent
-@text Rotate Event
-@desc Rotates an event with specified parameters
-@arg eventId
-@type number
-@text Event ID
-@desc Event ID (0 for this event, positive or negative)
-@default 0
-@arg angle
-@type number
-@decimals 2
-@text Angle
-@desc Target angle in degrees (positive or negative)
-@default 0
-@min -3600
-@max 3600
-@arg speed
-@type number
-@decimals 2
-@text Speed
-@desc Degrees per frame (positive or negative)
-@default 1
-@min -3600
-@max 3600
-@arg continuous
-@type boolean
-@text Continuous
-@desc 0 = one-time rotation, 1 = continuous
-@default false
-
-@command StopRotation
-@text Stop Rotation
-@desc Stops rotation of specified object
-@arg type
-@type select
-@option Picture
-@option Event
-@text Type
-@desc Type of object to stop rotating
-@default Picture
-@arg id
-@type number
-@text ID
-@desc ID of the object to stop (positive or negative)
-@default 1
 
 ## Source
 
